@@ -6,7 +6,7 @@ def display_deck(deck):
     
     mid = len(deck) // 2
     left = deck[:mid]
-    right = deck[:mid]
+    right = deck[mid:]
     
     total_cards = 0
     for (count1, name1), (count2, name2) in zip(left, right):
@@ -17,7 +17,7 @@ def display_deck(deck):
         
     if len(left) != len(right):
         count,name = right[-1]
-        print(f"{count2:2d}x {name}")
+        print(f"{count:2d}x {name}")
         total_cards += count
     
     print("="*80)
